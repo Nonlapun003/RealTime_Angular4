@@ -1,0 +1,20 @@
+<form (ngSubmit)="send()">
+    <input type="text" name="type" [(ngModel)]="message">
+    <input type="submit" value="Submit">
+  </form>
+  
+  <table border="1" >
+    <tr >
+      <div *ngFor="let trade of data">
+        <td>
+          {{ trade.trade_id }}
+        </td>
+        <td> 
+          {{ trade.rate }}
+        </td>
+        <td> 
+            {{ trade.amount }}
+        </td>
+      </div>
+    </tr>
+  </table>
